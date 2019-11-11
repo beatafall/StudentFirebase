@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="30dp">
+
+        <TextView
+            android:id="@+id/Form"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Form"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Form"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <Spinner
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:hint="Location" />
+
+        <Button
+            android:id="@+id/btnChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:text="Choose image!" />
+
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnChoose"
+            android:layout_marginTop="-43dp"
+            android:layout_toEndOf="@id/btnChoose"
+            android:layout_toRightOf="@id/btnChoose" />
+
+        <Button
+            android:id="@+id/pickBirthDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgView"
+            android:text="Pick your birth date" />
+
+
+        <TextView
+            android:id="@+id/birthDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pickBirthDate"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/birthDate"
+            android:text="Gender" />
+
+        <RadioGroup
+            android:id="@+id/gendergroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gender"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:layout_toRightOf="@id/male"
+                android:text="Female" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/hobbies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gendergroup"
+            android:text="Hobbies" />
+
+        <CheckBox
+            android:id="@+id/dance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hobbies"
+            android:text="True" />
+
+        <CheckBox
+            android:id="@+id/box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hobbies"
+            android:layout_toEndOf="@id/dance"
+            android:layout_toRightOf="@id/dance"
+            android:text="False" />
+
+
+        <Spinner
+            android:id="@+id/department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dance" />
+
+        <RadioGroup
+            android:id="@+id/studyyear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/department"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/I"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/department"
+                android:text="I." />
+
+            <RadioButton
+                android:id="@+id/II"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/department"
+                android:layout_toEndOf="@id/I"
+                android:layout_toRightOf="@id/I"
+                android:text="II." />
+
+            <RadioButton
+                android:id="@+id/III"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/department"
+                android:layout_toEndOf="@id/II"
+                android:layout_toRightOf="@id/II"
+                android:text="III." />
+
+            <RadioButton
+                android:id="@+id/IV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/department"
+                android:layout_toEndOf="@id/III"
+                android:layout_toRightOf="@id/III"
+                android:text="IV." />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/expectations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/studyyear"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Expectations"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expectations"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:text="Send" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/button2"
+            android:layout_below="@id/expectations"
+            android:text="List" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
